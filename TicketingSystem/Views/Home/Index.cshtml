@@ -48,7 +48,7 @@
                         <td>@task.Description</td>
                         <td>@task.Sprint.Name</td>
                         <td>@task.PointValue</td>
-                        <td>@task.Status</td>
+                        <td>@task.Status.Name</td>
                         <td>
                             <form asp-action="Edit" method="post"
                                   asp-route-id="@ViewBag.Filters.FilterString"
