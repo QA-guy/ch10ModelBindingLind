@@ -39,7 +39,7 @@ namespace TicketingSystem.Controllers
         public IActionResult Add()
         {
             ViewBag.Sprints = context.Sprints.ToList();
-            ViewBag.Status = context.Statuses.ToList();
+            ViewBag.Statuses = context.Statuses.ToList();
 
             return View();
         }
@@ -78,7 +78,7 @@ namespace TicketingSystem.Controllers
             else
             {
                 string newStatusId = selected.StatusId;
-                selected = context.Tickets.Find(selected.TicketId); ;
+                selected = context.Tickets.Find(selected.TicketId);
                 selected.StatusId = newStatusId;
                 context.Tickets.Update(selected);
             }
